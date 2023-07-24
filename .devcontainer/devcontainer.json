@@ -1,0 +1,7 @@
+{
+    "name": "Linux VM with Fluxbox by fowntain",
+    "dockerFile": "Dockerfile",
+    "forwardPorts": [5900],
+    "remoteUser": "vscode",
+    "postCreateCommand": "sudo -u vscode bash -c 'Xvfb :1 -screen 0 1024x768x16 & sleep 1; fluxbox & x11vnc -display :1 -N -forever -shared -rfbport 5900 -rfbauth /home/vscode/.vnc/passwd'"
+}
